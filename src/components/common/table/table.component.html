@@ -1,0 +1,14 @@
+<div>
+  <div class="row">
+    <div class="col header" *ngFor="let col of columns">
+      {{ col.name }}
+    </div>
+  </div>
+  <div *ngFor="let row of rows">
+    <div class="row cell">
+      <div class="col" *ngFor="let col of columns">
+        {{ getCell(col, row) }}
+      </div>
+    </div>
+  </div>
+</div>
